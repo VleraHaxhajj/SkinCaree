@@ -52,3 +52,54 @@ header{
     background-color: #e73c9a ;
     color: white;
 }
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content:center ;
+}
+
+.produkti1, .produkti2, .produkti3, .produkti4, .produkti5, .produkti6, .produkti7, .produkti8, .produkti9, .produkti10, .produkti11, .produkti12{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px, 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.produkti1:hover, .produkti2:hover, .produkti3:hover, .produkti4:hover, .produkti5:hover, .produkti6:hover, .produkti7:hover, .produkti8:hover, .produkti9:hover, .produkti10:hover, .produkti11:hover, .produkti12:hover{
+    transform: scale(1.05);
+}
+
+.produkti1 img,.produkti2 img,.produkti3 img,.produkti4 img,.produkti5 img,.produkti6 img,.produkti7 img,.produkti8 img,.produkti9 img,.produkti10 img,.produkti11 img,.produkti12 img,{
+ width: 100%;
+ height:auto;
+ border-radius:15px;
+}
+
+.produkti1:hover, .produkti2:hover, .produkti3:hover, .produkti4:hover, .produkti5:hover, .produkti6:hover, .produkti7:hover, .produkti8:hover, .produkti9:hover, .produkti10:hover, .produkti11:hover, .produkti12:hover{
+    transform: scale(1.1);
+}
+
+h1{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b0a0a;
+}
