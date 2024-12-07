@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f3ecef;
     margin :0;
     padding: 0;
@@ -11,7 +11,7 @@ header{
     color:#fff;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 40px 8px rgba(110, 179, 47, 0.1);
+    box-shadow: 0 40px 8px rgba(109, 179, 47, 0.1);
     position: relative;
 }
 
@@ -25,6 +25,7 @@ header{
     font-size: 24px;
     color: #333;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 .page-title {
    font-size: 36px;
@@ -32,7 +33,10 @@ header{
    margin: 0;
    letter-spacing: 2px;
    color: #333;
+   text-transform: uppercase;
    font-family:'Georgia', serif ;
+   letter-spacing: 3px;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .back-button{
@@ -46,9 +50,10 @@ header{
     font-size: 16px;
     border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.3 ease;
 }
 
-.back-button :hover{
+.back-button:hover{
     background-color: #e73c9a ;
     color: white;
 }
@@ -65,6 +70,7 @@ header{
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 6px, 12px rgba(0,0,0,0.1);
+    text-align: center;
     padding: 20px;
     width: 250px;
     position: relative;
@@ -75,7 +81,7 @@ header{
     transform: scale(1.05);
 }
 
-.produkti1 img,.produkti2 img,.produkti3 img,.produkti4 img,.produkti5 img,.produkti6 img,.produkti7 img,.produkti8 img,.produkti9 img,.produkti10 img,.produkti11 img,.produkti12 img,{
+.produkti1 img,.produkti2 img,.produkti3 img,.produkti4 img,.produkti5 img,.produkti6 img,.produkti7 img,.produkti8 img,.produkti9 img,.produkti10 img,.produkti11 img,.produkti12 img{
  width: 100%;
  height:auto;
  border-radius:15px;
@@ -86,7 +92,7 @@ header{
 }
 
 h1{
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
     font-weight: 500;
     margin: 10px 0;
@@ -103,3 +109,63 @@ h3{
     font-weight: 700;
     color: #0b0a0a;
 }
+
+.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f53f3f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background: transparent;
+    color: #450637;
+    border: 2px solid #f676ab;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+
+.add-to-cart:hover{
+    background-color: #333;
+    color: white;
+}
+
+.new-product, .best{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #9bdb08;
+    z-index: 2;
+}
+
+h4, h5{
+    font-size: 14px;
+    color: #777;
+}
+
+footer{
+    background-color: #FF369B;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    font-size: 16px;
+    margin: 0;
+}
+
