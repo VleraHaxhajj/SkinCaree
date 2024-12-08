@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #eadde4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: transparent;
+    padding: 20px;
+    border: 1px solid  rgb(189,8,221);
+    border-radius: 15px;
+    width: 300px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Georgia;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
