@@ -29,3 +29,44 @@ label{
     display: block;
     margin-bottom: 5px;
 }
+
+input {
+    width: 00%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid  #ccc;
+    border-radius:8px ;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid  rgb(189,8,221);
+    box-shadow: none;
+}
+
+.form-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    columns:  #333;
+    border: 1px solid  rgb(189,8,221);
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.back-to-login {
+    text-decoration: underline;
+    color:  #1f2ac4 ;
+    font-weight: normal;
+    text-align: center;
+    flex: 1;
+}
