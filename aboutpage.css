@@ -56,6 +56,10 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     border-color: rgb(189, 8, 221);
+<<<<<<< HEAD
+=======
+    resize: none;
+>>>>>>> 29393729cb8912103e39cf21a3dea4c7db9df25e
 }
 
 .form button {
