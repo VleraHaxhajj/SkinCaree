@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+    <title>LANEIGE Skincare & Make-up</title>
+</head>
+<body>
+    <header>
+       <a href="homepage.html"> <button class="back-button"><i class='bx bx-arrow-back'></i></button></a>
+        <h1 class="page-title">OUR PRODUCTS</h1>
+        <div class="header-filter">
+           <b> <label for="sort-filter">Sort by Price:</label></b>
+            <select id="sort-filter">
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+    </header>
+    
+    <div class="products-container">
+        <div class="produkti1">
+            <img src="IMG/product1.webp" alt="">
+            <h1>Water Bank Blue Hyaluronic Gel Moisturizer</h1>
+            <h2>Visibly Soothe & Hydrate</h2>
+            <h3 class="price">$25</h3>
+        </div>
+        <div class="produkti2">
+            <img src="IMG/product2.webp" alt="">
+            <h1>Water Bank Blue Hyaluronic Cream Moisturizer</h1>
+            <h2>Barrier-Boosting Hydration</h2>
+            <h3 class="price">$35</h3>
+        </div>
+        <div class="produkti3">
+            <img src="IMG/product3.webp" alt="">
+            <h1>Skin Toner & Moisturizer</h1>
+            <h2>Soften & Moisturize</h2>
+            <h3 class="price">$45</h3>
+        </div>
+        <div class="produkti4">
+            <img src="IMG/product4.webp" alt="">
+            <h1>Water Bank Blue Hyaluronic Intensive Moisturizer</h1>
+            <h2>Rich Hydration</h2>
+            <h3 class="price">$50</h3>
+            <div class="discount">-50%</div>
+        </div>
+        <div class="produkti5">
+            <img src="IMG/product5.webp" alt="">
+            <h1>Water Bank Blue Hyaluronic Serum</h1>
+            <h2>Visibly Firm & Improve Elasticity</h2>
+            <h3 class="price">$33.50</h3>
+            <div class="discount">-50%</div>
+        </div>
+        <div class="produkti6">
+            <img src="IMG/product6.webp" alt="">
+            <h1>Water Sleeping Mask</h1>
+            <h2>Brighten & Hydrate</h2>
+            <h3 class="price">$45</h3>
+            <div class="discount">-50%</div>
+        </div>
+        <div class="produkti7">
+            <div class="new-product">New</div>
+            <img src="IMG/product7.webp" alt="">
+            <h1>Bouncy & Firm Sleeping Mask</h1>
+            <h2>Visibly Plump & Firm</h2>
+            <h3 class="price">$49.99</h3>
+        </div>
+        <div class="produkti8">
+            <img src="IMG/product8.webp" alt="">
+            <h1>Water Sleeping Mask</h1>
+            <h2>Brighten & Hydrate</h2>
+            <div class="discount">-15%</div>
+            <h3 class="price">$35</h3>
+        </div>
+        <div class="produkti9">
+            <img src="IMG/product9.webp" alt="">
+            <h1>Cica Sleeping Mask</h1>
+            <h2>Smoothe & Moisturize</h2>
+            <h3 class="price">$25</h3>
+        </div>
+        <div class="produkti10">
+            <img src="IMG/product10.webp" alt="">
+            <h1>Free Water Bank Minis</h1>
+            <h2>Barrier-Boosting Hydration</h2>
+            <h3 class="price">$39.90</h3>
+        </div>
+        <div class="produkti11">
+            <div class="best">BEST</div>
+            <img src="IMG/product11.webp" alt="">
+            <h1>Water Sleeping Mask</h1>
+            <h2>Visibly Brighten</h2>
+            <h3 class="price">$55</h3>
+        </div>
+        <div class="produkti12">
+            <div class="new-product">New</div>
+            <img src="IMG/product12.webp" alt="">
+            <h1>Water Bank Blue Hyaluronic Cleansing Foam</h1>
+            <h2>Cleanse & Soften</h2>
+            <h3 class="price">$45</h3>
+        </div>
+
+        <!--Admin Panel e shtuar-->
+
+        <h1>ᴀᴅᴍɪɴ ᴘᴀɴᴇʟ</h1>
+
+        <section class="add-product-section">
+            <h2>Add new Product</h2>
+
+            <form id="add-product-form">
+
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+
+
+                <label for="product-description">Product Decsription:</label>
+                <textarea id="product-description" required></textarea>
+
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price required">
+
+                <label for="product-image">Product Image:</label>
+                <input type="file" id="product-image required">
+
+                <button type="submit">Add Product</button>
+
+
+            </form>
+
+        </section>
+        
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Products.All rights reserved.</p>
+    </footer>
+    <script src="admin_P.js"></script>
+</body>
+</html>
