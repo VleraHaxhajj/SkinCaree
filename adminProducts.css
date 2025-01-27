@@ -1,0 +1,252 @@
+/* PJESA E CSS E MARE NGA products.css */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f3ecef;
+    margin :0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #FF369B;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 40px 8px rgba(109, 179, 47, 0.1);
+    position: relative;
+}
+.header-filter {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #3e3a3a;
+    margin-left: 10px;
+}
+
+.header-filter label {
+    margin-right: 10px;
+}
+
+#sort-filter {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+    letter-spacing: 3px;
+    flex-grow: 1;
+    text-align: center;
+}
+.back-button{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #272626;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.back-button:hover{
+    background-color: #e8d2e1 ;
+    color: white;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content:center ;
+}
+
+.produkti1, .produkti2, .produkti3, .produkti4, .produkti5, .produkti6, .produkti7, .produkti8, .produkti9, .produkti10, .produkti11, .produkti12{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px, 12px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    position: relative;
+    transition: transform 0.3s ease;
+    
+}
+
+.produkti1 img,.produkti2 img,.produkti3 img,.produkti4 img,.produkti5 img,.produkti6 img,.produkti7 img,.produkti8 img,.produkti9 img,.produkti10 img,.produkti11 img,.produkti12 img{
+ width: 100%;
+ height:auto;
+ border-radius:15px;
+}
+
+.produkti1:hover, .produkti2:hover, .produkti3:hover, .produkti4:hover, .produkti5:hover, .produkti6:hover, .produkti7:hover, .produkti8:hover, .produkti9:hover, .produkti10:hover, .produkti11:hover, .produkti12:hover{
+    transform: scale(1.1);
+}
+
+h1{
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b0a0a;
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f53f3f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.new-product, .best{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #9bdb08;
+    z-index: 2;
+}
+
+h4, h5{
+    font-size: 14px;
+    color: #777;
+}
+
+footer{
+    background-color: #FF369B;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    font-size: 16px;
+    margin: 0;
+}
+
+.filter-section {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#price-filter {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+/*vazhdimi i stilizimit te kesaj faqe per Admin*/
+
+#add-product-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#add-product-form input , #add-product-form textarea , #add-product-form button{
+    width:100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}
+
+#add-product-form button {
+    background-color: #FF369B;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-prodict-form button:hover {
+    background-color: #e82e8c;
+} 
+
+.edit-product, .delete-product {
+    background-color: #FF369B;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+.edit-product:hover , .delete-product:hover {
+    background-color: #e82e8c;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+}
+.edit-product:hover{
+    background-color: #e0a800;
+}
+
+.delete-btn{
+    background-color: #dc3525;
+    color: white;
+}
+
+.delete-product:hover{
+    background-color: #c82333;
+}
