@@ -1,0 +1,116 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header{
+    background:#FF369B ;
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+header i{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    cursor: pointer;
+}
+
+header a{
+    color: #000;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #555;
+}
+
+header h1 {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 0px rgba(0, 0, 0,0. 1);
+}
+
+.contact-info h2, .form-selection h2{
+    color:#FF369B;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    margin: 10px 0 5px;
+}
+
+form input,
+form textarea,
+form button{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea{
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+form button{
+    background-color: #FF369B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color:#FF369B ;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background: #FF369B;
+    color: #fff;
+}

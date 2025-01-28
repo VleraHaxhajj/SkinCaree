@@ -237,6 +237,7 @@ footer p{
 
 .edit-btn {
     background-color: #ffc107;
+    color: white;
 }
 .edit-product:hover{
     background-color: #e0a800;
@@ -249,4 +250,64 @@ footer p{
 
 .delete-product:hover{
     background-color: #c82333;
+}
+
+
+.add-product-selection {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.add-product-selection h2{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color : #FF369B;
+}
+
+#add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#add-product-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color:#555;
+}
+
+#add-product-form input, 
+#add-product-form textarea{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s;
+    resize: none;
+}
+
+#add-prodict-form button {
+    padding: 10px;
+    background-color: #FF369B;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+#add-product-form input:focus,
+#add-product-form textarea:focus{
+    border: 1px solid #FF369B;
 }
