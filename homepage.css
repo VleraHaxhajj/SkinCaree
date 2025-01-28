@@ -53,11 +53,7 @@ body {
   }
   
   .hero {
-<<<<<<< HEAD
     background-image: url('IMG/fotojahome33.jpg'); 
-=======
-    background-image: url('fotojahome33.jpg'); 
->>>>>>> 29393729cb8912103e39cf21a3dea4c7db9df25e
     background-size: cover; 
     background-position: center;
     height: 400px; 
@@ -81,5 +77,7 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
   }
+
+  
 
  
