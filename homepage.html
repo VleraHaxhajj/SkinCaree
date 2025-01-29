@@ -20,9 +20,14 @@
                         <li><a href="login.html">
                             <i class='bx bx-user-circle'></i>
                         </a></li>
-                        <li><a href="#">
-                            <i class='bx bx-dots-vertical-rounded'></i>
-                        </a></li>
+                        <li class="dropdown">
+                            <a href="#" id="menu-icon">
+                                <i class='bx bx-dots-vertical-rounded'></i>
+                            </a>
+                            <div class="dropdown-content" id="dropdown-menu">
+                                <a href="logout.php">Log Out</a>
+                            </div>
+                        </li>                        
                     </ul>
                 </nav>
     </header>
@@ -35,6 +40,6 @@
             </p>
         </div>
     </section>
-    
+    <script src="dropdown.js"></script>
 </body>
 </html>

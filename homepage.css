@@ -9,7 +9,6 @@ body {
   header {
     background-color: #FF369B;
     color: black;
-    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +26,6 @@ body {
     margin-right: 15px;
     font-size: 18px;
     font-weight: bold;
-    gap: 20px;
   }
 
   header nav ul {
@@ -54,7 +52,37 @@ body {
   header nav ul li a:hover i {
     color: grey;
   }
-  
+
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+  top: 30px; 
+  right: 0;
+}
+
+
+.show {
+  display: block; 
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
   .hero {
     background-image: url('IMG/fotojahome33.jpg'); 
     background-size: cover; 
