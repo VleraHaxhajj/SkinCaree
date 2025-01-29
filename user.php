@@ -36,7 +36,7 @@ class User{
 
                 session_start();
                 $_SESSION['user_id']=$row['id'];
-                $_SESSION['email'];=$row['email'];
+                $_SESSION['email']=$row['email'];
                 return true;
             }
         }
