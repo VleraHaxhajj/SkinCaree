@@ -16,6 +16,20 @@ header {
     box-shadow: 0 40px 8px rgba(109, 179, 47, 0.1);
     position: relative;
 }
+header i{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top :30px;
+    cursor: pointer;
+}
+header a{
+    color: #000;
+    text-decoration: none;
+}
+header a:hover {
+    color: #555;
+}
 .header-filter {
     display: flex;
     align-items: center;
