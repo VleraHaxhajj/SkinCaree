@@ -27,7 +27,7 @@
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
                 if($user){
-                    if(password_verify($password,$user[password])){
+                    if(password_verify($password,$user['password'])){
                         header("Location:index.php");
                         die();
 
