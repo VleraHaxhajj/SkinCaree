@@ -57,8 +57,7 @@
         </div>
         <button type="submit" class="buton">Login</button>
         <div class="register-link">
-           <p> <>Don't have an account?</p>
-                <a href="register.html">Register</a>
+           <p> <>Don't have an account?<a href="register.html">Register</a></p> 
         </div>
     </div>
     </form>
