@@ -14,6 +14,7 @@
     </header>
     <div class="wrapper">
         <?php
+<<<<<<< HEAD
         if(isset($_POST["login"])){
             $name = $_POST ["name"];
             $password = $_POST ["password"];
@@ -25,6 +26,31 @@
                 mysqli_stmt_execute($stmt);
                 $result + mysqli_stmt_get_result($stmt);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+=======
+          
+          include_once 'Database.php';
+          include_once 'User.php';
+     
+         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        /* $db = new Database();
+         $connection = $db->getConnection();
+         $user = new User($connection);*/
+     
+         
+         $name = $_POST['name'];
+         $email = $_POST['email'];
+         $password = $_POST['password'];
+       
+         if ($user->register($name, $email, $password)) {
+             header("Location: login.php"); 
+             exit;
+         } else {
+             echo "Error registering user!";
+         }
+     }
+   
+        ?>
+>>>>>>> 78d0c52 (update)
 
                 if($user){
                     if(password_verify($password,$user['password'])){
