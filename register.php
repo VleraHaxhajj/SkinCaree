@@ -29,6 +29,13 @@
         $password = $_POST['password'];
 
 
+        if($user->emailExists($email)){
+            
+            echo"This user already exists";
+        }elseif(strlen($password)<8){
+            echo "Password must be at least 8 characters long";
+        }else{
+        
         if($user->register($name,$email,$password)){
             header("Location: login.php");
             exit;
@@ -36,6 +43,7 @@
             echo "Error registering user!";
         }
     }
+}
 
 ?>
         <h2>Register</h2>
