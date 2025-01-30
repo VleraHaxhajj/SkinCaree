@@ -6,6 +6,8 @@
     <title>LANEIGE Skincare & Make-up</title>
     <link rel="stylesheet" href="login.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,26 +26,37 @@
          $user = new User($connection);
      
          
-         $name = $_POST['name'];
          $email = $_POST['email'];
          $password = $_POST['password'];
-       
-         if ($user->register($name, $email, $password)) {
-             header("Location: login.php"); 
-             exit;
-         } else {
-             echo "Error registering user!";
+
+
+         if ($user->login($email, $password)) {
+            echo '<script>toastr.success("Login successful!");</script>';
+         }
+
+         if($user->emailExists($email)){
+            if($user->login($email,$password)){
+                session_start();
+                $_SESSION['user_email'] = $email;
+                header("Location: homepage.html");
+                exit;
+            }else{
+                echo '<script>toastr.error("Incorrect password!");</script>';
+            }
+         }else{
+            echo'<script>Swal.fire("Error", "User not registered!", "error");</script>';
          }
      }
    
         ?>
 
+    <form action="login.php" method="POST">
         <h1>Login</h1>
         <div class="input-box">
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" name="email" placeholder="Enter your email" required>
         </div>
         <div class="input-box">
-            <input type="password" placeholder="Enter your password" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
         </div>
         <div class="remember-forgot">
             <label><input type="checkbox">Remember me</label>
@@ -51,11 +64,10 @@
         </div>
         <button type="submit" class="buton">Login</button>
         <div class="register-link">
-            <>Don't have an account?
-                <a href="register.html">Register</a>
-    </p>
+           <p> <>Don't have an account?<a href="register.html">Register</a></p> 
         </div>
     </div>
+    </form>
     <script src="login.js"></script>
 </body>
 </html>

@@ -23,6 +23,16 @@ class user{
         return false;
     }
 
+    public function emailExists($email) {
+        $query = "SELECT id FROM {$this->table_name} WHERE email = :email LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
+    }
+    
+    
+
     public function login($email, $password){
         $query = "SELECT id, name, email, password FROM {$this->table_name} WHERE email= :email";
 
