@@ -19,7 +19,7 @@
           include_once 'User.php';
      
          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        /$db = new Database();
+        $db = new Database();
          $connection = $db->getConnection();
          $user = new User($connection);
      
