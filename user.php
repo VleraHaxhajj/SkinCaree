@@ -1,6 +1,6 @@
 <?php
 
-class User{
+class user{
     private $conn;
     private $table_name = 'user';
     
