@@ -6,6 +6,8 @@
     <title>LANEIGE Skincare & Make-up</title>
     <link rel="stylesheet" href="register.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,17 +32,18 @@
 
 
         if($user->emailExists($email)){
-            
-            echo"This user already exists";
+
+            echo '<script>toastr.error("This user already exists!");</script>';
         }elseif(strlen($password)<8){
-            echo "Password must be at least 8 characters long";
+            echo '<script>toastr.error("Password must be at least 8 characters long!");</script>';
         }else{
         
         if($user->register($name,$email,$password)){
+            echo '<script>toastr.success("Registration successful!");</script>';
             header("Location: login.php");
             exit;
-        }else{
-            echo "Error registering user!";
+        } else{
+            echo '<script>toastr.error("Error registering user!");</script>';
         }
     }
 }

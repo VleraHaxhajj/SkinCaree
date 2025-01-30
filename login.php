@@ -6,6 +6,8 @@
     <title>LANEIGE Skincare & Make-up</title>
     <link rel="stylesheet" href="login.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 <body>
     <header>
@@ -27,6 +29,11 @@
          $email = $_POST['email'];
          $password = $_POST['password'];
 
+
+         if ($user->login($email, $password)) {
+            echo '<script>toastr.success("Login successful!");</script>';
+         }
+
          if($user->emailExists($email)){
             if($user->login($email,$password)){
                 session_start();
@@ -34,10 +41,10 @@
                 header("Location: homepage.html");
                 exit;
             }else{
-                echo '<p style="color: red; font-weight: bold;">Incorrect password!</p>';
+                echo '<script>toastr.error("Incorrect password!");</script>';
             }
          }else{
-            echo '<p style="color: red; font-weight: bold;">User not registered!</p>';
+            echo'<script>Swal.fire("Error", "User not registered!", "error");</script>';
          }
      }
    
