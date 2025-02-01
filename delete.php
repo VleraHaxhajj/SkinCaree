@@ -1,15 +1,18 @@
 <?php
+require 'database.php'; 
 
-$userId = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
 
-include_once 'userR.php';
-
-$userR= new userR();
-
-$userR ->deleteUser(($userId));
-
-header("location:dashboard.php");
-
-
-
+    
+    $delete_sql = "DELETE FROM users WHERE id = $id";
+    if ($conn->query($delete_sql)) {
+        header('Location: admindashboard.php');
+        exit();
+    } else {
+        die("Error deleting user: " . $conn->error);
+    }
+} else {
+    die("Invalid request.");
+}
 ?>
