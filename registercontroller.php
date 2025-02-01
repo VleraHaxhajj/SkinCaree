@@ -1,28 +1,26 @@
 <?php
+require_once 'databaseconnection.php';
+require_once 'User.php';
+require_once 'UserRepository.php';
 
-include_once 'userR.php';
-include_once 'useer.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $db = new DatabaseConnection();
+    $userRepo = new UserRepository($db);
 
-if(isset($_POST['registerBtn'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['password'])) {
-        echo "Fill in all fields!";
+    if ($userRepo->getUserByEmail($email)) {
+        echo "Email already exists!";
+    } else {
+   
+        $user = new User($name, $email, password_hash($password, PASSWORD_DEFAULT)); // Përdor hashing për passwordin
+        $userRepo->registerUser($user);
+        
 
-    }else{
-
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $id = $name . rand(100,999);
-
-        $user = new user ($id, $name, $email, $password);
-
-        $userRepository = new userR ();
-
-        $userRepository->insertUser($user);
+        header("Location: login.php");
+        exit(); 
     }
-
 }
-
 ?>

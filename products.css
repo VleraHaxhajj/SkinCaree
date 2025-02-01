@@ -207,3 +207,12 @@ footer p{
 }
 
 
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+}

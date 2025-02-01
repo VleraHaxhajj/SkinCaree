@@ -100,3 +100,12 @@ button {
     text-align: center;
     flex: 1;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+}

@@ -112,3 +112,13 @@ input-box input ::placeholder {
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+}
