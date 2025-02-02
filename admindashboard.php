@@ -13,6 +13,19 @@ require 'database.php';
 </head>
 <body>
     <div class="dashboard-container">
+
+        <?php
+          session_start();
+          if(!isset($_SESSION['user'])){
+              header("Location: login.php");
+              exit();
+          }
+          header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+          header("Pragma: no-cache");
+          header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+
+          ?>
+
         <aside class="sidebar">
             <h2>Admin Dashboard</h2>
             <ul>
