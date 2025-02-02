@@ -69,6 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 </body>
+    <script>
+    window.history.pushState(null, "", window.location.href);
+    window.history.back();
+    window.history.forward();
+</script>
 </html>
 
 
