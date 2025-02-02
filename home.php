@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="homepage.css">
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <style>
+
+         <?php
+
+        session_start();
+        if(!isset($_SESSION['user'])){
+            header("Location: login.php");
+            exit();
+        }
+        ?>
  
         body {
             font-family: Arial, sans-serif;
@@ -122,6 +131,17 @@
             bottom: 0;
             width: 100%;
         }
+
+          @media (max-width: 768px) {
+          .container {
+          padding: 10px;
+      }
+
+         .header {
+         font-size: 18px;
+    }
+}
+
     </style>
 </head>
 <body>
